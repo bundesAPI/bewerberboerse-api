@@ -17,6 +17,7 @@ Die Bewerberbörse ermöglicht es, Bewerber*innen mit verschiedenen GET-Paramete
 
 ### Example
 
+* Api Key Authentication (APIKeyHeaders):
 
 ```python
 import time
@@ -29,9 +30,19 @@ configuration = Bewerberboerse.Configuration(
     host = "https://rest.arbeitsagentur.de/jobboerse/bewerbersuche-service"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeaders
+configuration.api_key['APIKeyHeaders'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeaders'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with Bewerberboerse.ApiClient() as api_client:
+with Bewerberboerse.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
     was = "Wissenschaftlicher Mitarbeiter" # str | Beruf, Kenntnisse, Sprachen, etc. (optional)
@@ -79,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKeyHeaders](../README.md#APIKeyHeaders)
 
 ### HTTP request headers
 
@@ -104,6 +115,7 @@ Details zu einzelnen Bewerbenden lassen sich unter Angabe der Referenznummer (z.
 
 ### Example
 
+* Api Key Authentication (APIKeyHeaders):
 
 ```python
 import time
@@ -116,9 +128,19 @@ configuration = Bewerberboerse.Configuration(
     host = "https://rest.arbeitsagentur.de/jobboerse/bewerbersuche-service"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKeyHeaders
+configuration.api_key['APIKeyHeaders'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeaders'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with Bewerberboerse.ApiClient() as api_client:
+with Bewerberboerse.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
     referenznummer = "10005-955011998040991647-B" # str | Referenznummer
@@ -144,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKeyHeaders](../README.md#APIKeyHeaders)
 
 ### HTTP request headers
 

@@ -3,7 +3,7 @@
 """
     Arbeitsagentur Bewerberbörse API
 
-     Eine der größten Datenbanken für Bewerbende in Deutschland durchsuchen.   Die Authentifizierung funktioniert per OAuth 2 Client Credentials mit JWTs. Folgende Client-Credentials können dafür verwendet werden:  **ClientID:** 919b0af7-6e5f-4542-a7f5-04268b8bae2e  **ClientSecret:** 93fce94c-5be2-4dc8-b040-c62818a4b003  **Achtung**: der generierte Token muss bei folgenden GET-requests an https://rest.arbeitsagentur.de/jobboerse/bewerbersuche-service/pc/v1/bewerber im header als 'OAuthAccessToken' inkludiert werden.   # noqa: E501
+     Eine der größten Datenbanken für Bewerbende in Deutschland durchsuchen.   Die Authentifizierung funktioniert per OAuth 2 Client Credentials mit JWTs. Folgende Client-Credentials können dafür verwendet werden:  **ClientID:** 919b0af7-6e5f-4542-a7f5-04268b8bae2e  **ClientSecret:** 93fce94c-5be2-4dc8-b040-c62818a4b003  **Achtung**: der generierte Token muss bei folgenden GET-requests im header als *'OAuthAccessToken'* inkludiert werden. Alternativ kann man bei folgenden GET-requests auch direkt die *client_id* als Header-Parameter *'X-API-Key'* übergeben - *'OAuthAccessToken'* ist in diesem Fall nicht erforderlich. 🚀   # noqa: E501
 
     The version of the OpenAPI document: 1.0.0
     Contact: andreasfischer1985@web.de
