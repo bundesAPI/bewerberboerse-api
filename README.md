@@ -3,26 +3,11 @@ Die Bundesagentur für Arbeit verfügt über eine der größten Datenbanken für
 
 
 ## Authentifizierung
-Die Authentifizierung funktioniert per OAuth 2 Client Credentials mit JWTs.
-Client Credentials sind, wie https://www.arbeitsagentur.de/bewerberboerse/config/config.js zu entnehmen ist, folgende:
+Die Authentifizierung funktioniert über die clientId der Bewerberbörse:
 
-**client_id:** 919b0af7-6e5f-4542-a7f5-04268b8bae2e
+clientId: jobboerse-bewerbersuche-ui
 
-**client_secret:** 93fce94c-5be2-4dc8-b040-c62818a4b003
-
-**grant_type:** client_credentials
-
-Die Credentials sind im body eines POST-request an https://rest.arbeitsagentur.de/oauth/gettoken_cc zu senden.
-
-```bash
-token=$(curl \
--d "client_id=919b0af7-6e5f-4542-a7f5-04268b8bae2e&client_secret=93fce94c-5be2-4dc8-b040-c62818a4b003&grant_type=client_credentials" \
--X POST 'https://rest.arbeitsagentur.de/oauth/gettoken_cc' |grep -Eo '[^"]{400,}'|head -n 1)
-```
-
-Der generierte Token muss bei folgenden GET-requests an https://rest.arbeitsagentur.de/jobboerse/bewerbersuche-service/pc/v1/bewerber im header als 'OAuthAccessToken' inkludiert werden.
-
-**Hinweis:** Alternativ kann man bei folgenden GET-requests auch direkt die *client_id* als Header-Parameter *'X-API-Key'* übergeben - *'OAuthAccessToken'* ist in diesem Fall nicht erforderlich. 🚀
+Bei folgenden GET-requests ist die clientId als Header-Parameter 'X-API-Key' zu übergeben.
 
 
 ## Bewerbendenbörse
@@ -121,7 +106,7 @@ Anzahl der Ergebnisse
 
 ```bash
 bewerbende=$(curl -m 60 \
--H "OAuthAccessToken: $token" \
+-H "X-API-Key: jobboerse-bewerbersuche-ui" \
 'https://rest.arbeitsagentur.de/jobboerse/bewerbersuche-service/pc/v1/bewerber?angebotsart=ar&wo=Feucht&umkreis=0&page=0&size=25')
 ```
 
@@ -138,6 +123,6 @@ u.a. Bildungshistorie, beruflicher Werdegang, Lizenzen, Kenntnisse & Skills.
 
 ```bash
 bewerbendendetails=$(curl -m 60 \
--H "OAuthAccessToken: $token" \
+-H "X-API-Key: jobboerse-bewerbersuche-ui" \
 'https://rest.arbeitsagentur.de/jobboerse/bewerbersuche-service/pc/v1/bewerberdetails/10005-955011998040991647-B')
 ```
