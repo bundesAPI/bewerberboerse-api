@@ -20,45 +20,45 @@ Bewerberboerse.api\_client module
 
 .. automodule:: Bewerberboerse.api_client
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Bewerberboerse.configuration module
 -----------------------------------
 
 .. automodule:: Bewerberboerse.configuration
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Bewerberboerse.exceptions module
 --------------------------------
 
 .. automodule:: Bewerberboerse.exceptions
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Bewerberboerse.model\_utils module
 ----------------------------------
 
 .. automodule:: Bewerberboerse.model_utils
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Bewerberboerse.rest module
 --------------------------
 
 .. automodule:: Bewerberboerse.rest
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: Bewerberboerse
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

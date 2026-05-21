@@ -6,5 +6,5 @@ Module contents
 
 .. automodule:: Bewerberboerse.apis
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -9,13 +9,13 @@ Bewerberboerse.api.default\_api module
 
 .. automodule:: Bewerberboerse.api.default_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: Bewerberboerse.api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
